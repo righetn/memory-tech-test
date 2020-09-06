@@ -4,8 +4,8 @@ import "./Info.scss"
 const Info = ({title, value}) => {
     return (
         <div className="info-container">
-            <p>{title}</p>
-            <p>{value}</p>
+            <h3 className="title">{title}</h3>
+            <p className='value'>{value}</p>
         </div>
     )
 }

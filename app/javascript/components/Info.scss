@@ -1,5 +1,21 @@
+@import 'variables';
+
 .info-container {
-    border: 1px solid blue;
-    margin: 8px;
-    padding: 8px;
+    display: flex;
+    border: 1px solid $light-cyan;
+    margin: $grid-unit;
+    padding: $grid-unit;
+    border-radius: 20px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: $dark-gray;
+}
+.value {
+    color: $burnt-umber;
+    font-size: large;
 }

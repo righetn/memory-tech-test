@@ -1,11 +1,57 @@
-.head {
-    background-color: blue;
-  }
+@import 'variables';
 
-.flex-container {
+* {
+    font-family: 'Helvetica';
+}
+
+body {
+    margin: 0;
+}
+
+.header-container {
     display: flex;
+    background-color: $gainsboro;
+    padding: $grid-unit * 3;
+    margin: 0;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 4px;
+}
+
+.header {
+    color: #585858;
+}
+
+.title {
+    color: $dark-gray;
+}
+
+.country-container {
+    display: flex;
+    margin: $grid-unit * 5;
+}
+
+.summary-container {
+    margin: $grid-unit * 5;
+}
+
+.infos-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: center;
+}
+
+.chart {
+    width: 50%;
 }
 
 .contry-selector {
-    margin: 8px;
+    margin: $grid-unit;
+    margin-left: $grid-unit * 2;
+    border-radius: 4px;
+    padding-left: $grid-unit;
 }

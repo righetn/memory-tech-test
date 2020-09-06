@@ -26,8 +26,8 @@ const Dashboard = ({countries}) => {
     datasets: [
       {
         label: "Monthly revenue",
-        backgroundColor: 'rgba(255,99,132,0.2)',
-        borderColor: 'rgba(255,99,132,1)',
+        backgroundColor: '#DF7168',
+        borderColor: '#8C271E',
         borderWidth: 1,
         hoverBackgroundColor: 'rgba(255,99,132,0.4)',
         hoverBorderColor: 'rgba(255,99,132,1)',
@@ -38,27 +38,33 @@ const Dashboard = ({countries}) => {
 
   return (
       <div>
-        <div className="head">Memory</div>
+        <div className="header-container">
+          <h1 className="header">Memory</h1>
+        </div>
 
-        <div className="flex-container">
-          <p>Country</p>
+        <div className="country-container">
+          <h3 className="title">Country</h3>
           <select className="contry-selector" defaultValue={currentCountry} onChange={e => setCurrentCountry(e.target.value)}>
               {countries.map((country, index) => {
                   return <option key={index} value={country}>{country}</option>
               })}
           </select>
         </div>
-
-        <div className="flex-container">
-          <p>Summary</p>
-          <Info title="Revenue" value={data.total_revenue}/>
-          <Info title="Average" value={data.average}/>
-          <Info title="Customer" value={data.customer_number}/>
+        
+        <div className="summary-container">
+          <h3 className="title">Summary</h3>
+          <div className="infos-container">
+            <Info title="Revenue" value={data.total_revenue}/>
+            <Info title="Average" value={data.average}/>
+            <Info title="Customer" value={data.customer_number}/>
+          </div>
         </div>
 
-        <Bar
-          data={dataChart}
-        />
+        <div className="chart-container">
+          <div className="chart">
+            <Bar data={dataChart}/>
+          </div>
+        </div>
       </div>
   );
 }
